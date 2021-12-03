@@ -1,0 +1,20 @@
+# importing flask
+from flask import Flask
+
+# __name__ name of the module
+app = Flask(__name__)
+# prints the name variable on console
+# print(__name__)
+
+# when the user hit on the browser
+# localhost:5000/ this function will be executed
+@app.route('/')
+def home():
+    return 'Hello Flask!'
+
+# function execute once user
+# visit localhost:5000/about
+# name of function and route don't need to match!
+@app.route('/about')
+def about():
+    return 'This is a url shortener'
